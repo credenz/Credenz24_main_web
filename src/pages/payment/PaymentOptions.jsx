@@ -98,6 +98,7 @@ const PaymentOptions = ({ total }) => {
 	const onConfirm = () => {
 		// if (openModal
 		// )
+		closeModal();
 		dispatch(emptyCart());
 		navigate('/profile');
 		toast.success('Ticked Booked successfully!', {
@@ -109,7 +110,6 @@ const PaymentOptions = ({ total }) => {
 				border: '1px solid gray',
 			},
 		});
-		closeModal();
 	};
 
 	const handleClick = async () => {

@@ -20,15 +20,7 @@ const Register = () => {
 
 	const onSubmit = (data) => {
 		data = { ...data, senior: userType };
-		toast.loading('Please wait', {
-			style: {
-				background: '#1e3257',
-				margin: '7px',
-				borderRadius: '7px',
-				color: 'white',
-				border: '1px solid gray',
-			},
-		});
+
 		if (data.phone.length !== 10) {
 			toast.warning('Please enter 10 digit Phone Number!', {
 				style: {
@@ -39,10 +31,23 @@ const Register = () => {
 					border: '1px solid gray',
 				},
 			});
+
+			// return;
 		}
-		if (data.cpassword === data.password) {
+
+		if (data.cpassword === data.password && data.password.length > 6) {
+			toast.loading('Please wait', {
+				style: {
+					background: '#1e3257',
+					margin: '7px',
+					borderRadius: '7px',
+					color: 'white',
+					border: '1px solid gray',
+				},
+			});
 			delete data.cpassword;
 			data = { ...data, register: '' };
+
 			Requests.register(data)
 				.then((res) => {
 					localStorage.setItem('token', res.data.access);
@@ -61,31 +66,31 @@ const Register = () => {
 				})
 				.catch((err) => {
 					toast.dismiss();
-					// console.log(err);
+					console.log(err);
 					const msg = err.response.data;
-					// console.log(msg);
-					if (msg.password) {
+					console.log(msg);
+					if (msg?.message?.username) {
+						toast.warning(msg.message.username[0], {
+							style: {
+								background: '#1e3257',
+								margin: '7px',
+								borderRadius: '7px',
+								color: 'white',
+								border: '1px solid gray',
+							},
+						});
+					} else if (msg[0]) {
+						toast.error(err.response.data[0], {
+							style: {
+								background: '#1e3257',
+								margin: '7px',
+								borderRadius: '7px',
+								color: 'white',
+								border: '1px solid gray',
+							},
+						});
+					} else if (msg.password) {
 						toast.warning(msg.password[0], {
-							style: {
-								background: '#1e3257',
-								margin: '7px',
-								borderRadius: '7px',
-								color: 'white',
-								border: '1px solid gray',
-							},
-						});
-					} else if (!msg) {
-						toast.error('There was an error while Registration!', {
-							style: {
-								background: '#1e3257',
-								margin: '7px',
-								borderRadius: '7px',
-								color: 'white',
-								border: '1px solid gray',
-							},
-						});
-					} else if (msg.username) {
-						toast.warning(msg.username[0], {
 							style: {
 								background: '#1e3257',
 								margin: '7px',
@@ -104,10 +109,20 @@ const Register = () => {
 								border: '1px solid gray',
 							},
 						});
+					} else {
+						toast.error('There was an error while Registration!', {
+							style: {
+								background: '#1e3257',
+								margin: '7px',
+								borderRadius: '7px',
+								color: 'white',
+								border: '1px solid gray',
+							},
+						});
 					}
 				});
 		} else {
-			toast.warning('Passwords do not match!', {
+			toast.warning('Passwords do not match or password is too short!', {
 				style: {
 					background: '#1e3257',
 					margin: '7px',
@@ -167,11 +182,14 @@ const Register = () => {
 					<div className="my-3">
 						<input
 							{...register('phone', {
-								maxLength: 10,
-								minLength: 10,
+								pattern: {
+									// value: /^\d{10}$/,
+									message: 'Phone number must be exactly 10 digits long.',
+								},
 							})}
+							maxLength="10"
 							placeholder="Phone"
-							type="number"
+							type="tel"
 							className="font-[Poppins] bg-sky-950 border text-blue-100 mx-auto border-slate-600   sm:text-sm rounded-lg focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500 block w-[90%] p-2.5 dark:bg-gray-700 dark:border-blue-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500  placeholder:text-[1.00rem]"
 							required
 						/>

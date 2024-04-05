@@ -6,7 +6,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 const ResetPass = () => {
 	const { token, uid } = useParams();
-
+	const navigate = useNavigate();
 	const { register, handleSubmit } = useForm();
 	const onReset = (data) => {
 		toast.loading('Please wait ...');
@@ -31,6 +31,7 @@ const ResetPass = () => {
 					if (res.data) {
 						toast.success(res.data.message);
 					}
+					navigate('/login');
 				})
 				.catch((err) => {
 					console.log(err);

@@ -48,7 +48,7 @@ function Card({ imagen, name, posi, ph, mailid, lknid }) {
 			</div>
 
 			<div className="flex justify-around mb-10 md:m-[3] lg:mt-2  gap-4 cursor-pointer">
-				<a href={mailid} target="_blank" rel="noopener noreferrer">
+				<a href={`mailto: mailid`} target="_blank" rel="noopener noreferrer">
 					<FontAwesomeIcon
 						icon={faEnvelope}
 						style={{ color: 'skyblue', fontSize: '20px' }}

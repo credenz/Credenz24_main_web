@@ -1,10 +1,10 @@
-import React,{useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import ContactProfileCard from '../../components/cards/ContactProfileCard';
 import { BackgroundGradient } from '../../components/ui/background-gradient';
 import { TypewriterEffectSmoothDemo } from '../../components/cards/TextGenerateEffectCard';
-import { v4 as uuidv4 } from "uuid";
-import Carousel from "../../components/Carousel"
+import { v4 as uuidv4 } from 'uuid';
+import Carousel from '../../components/Carousel';
 import Typewriter from 'typewriter-effect';
 import './Sponsors.css';
 import imgdh from '../../assets/admin-photos/dhruvgoplani.jpg';
@@ -14,44 +14,34 @@ import imgpr from '../../assets/admin-photos/Premdeshmukh.jpeg';
 import { useWindowSize } from 'react-use';
 import Footer from '../../components/Footer';
 const Sponsors = () => {
-
 	const { width } = useWindowSize();
-	const [pages,setPages] = useState(3);
+	const [pages, setPages] = useState(3);
 	const [offset, setOffset] = useState(2);
 	useEffect(() => {
 		// Update pages and offset values based on screen width
 		if (width < 425) {
-		  setPages(3.9); // Set pages value for small screens
-		  setOffset(1.8); 
-		} 
-		 else {
-		  setPages(1.5); // Set pages value for larger screens
-		  setOffset(2); // Set offset value for larger screens
+			setPages(3.9); // Set pages value for small screens
+			setOffset(1.8);
+		} else {
+			setPages(1.5); // Set pages value for larger screens
+			setOffset(2); // Set offset value for larger screens
 		}
-	  }, [width]); // Update whenever width changes
+	}, [width]); // Update whenever width changes
 
 	let cards = [
 		{
-		  key: uuidv4(),
-		  content: (
-		  
-			  <Card imagen={imgdh} name={"Dhruv Goplani"} />
-		  )
+			key: uuidv4(),
+			content: <Card imagen={imgdh} name={'Dhruv Goplani'} />,
 		},
 		{
-		  key: uuidv4(),
-		  content: (
-			  <Card imagen={imgpr} name={"Prem Deshmukh"} />
-		  )
+			key: uuidv4(),
+			content: <Card imagen={imgpr} name={'Prem Deshmukh'} />,
 		},
 		{
-		  key: uuidv4(),
-		  content: (
-			  <Card imagen={imgpb} name={"Pranav Bhiungade"} />
-		  )
+			key: uuidv4(),
+			content: <Card imagen={imgpb} name={'Pranav Bhiungade'} />,
 		},
-		
-	  ];
+	];
 	return (
 		<div className="">
 			<div className="sponsors -z-10">
@@ -134,7 +124,7 @@ const Sponsors = () => {
 								Finance Team
 							</div>
 							<div className=" gap-5 mt-10 items-center flex justify-evenly cardb">
-							<Card
+								<Card
 									className=""
 									name={'Prem Deshmukh'}
 									// posit={'Treasure'}
@@ -142,26 +132,30 @@ const Sponsors = () => {
 								<Card
 									className=""
 									name={'Dhruv Goplani'}
+									mailid={'dhruvgoplani00@gmail.com'}
+									lknid={
+										'https://www.linkedin.com/in/dhruv-goplani-618b77243?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+									}
 									// posit={'Marketing Head'}
 									imagen={imgdh}></Card>
 								<Card
 									className=""
 									name={'Pranav Bhiungade'}
 									// posit={'Secretary of Finance'}
+
 									imagen={imgpb}></Card>
 							</div>
 							{/* <div className='flex md:hidden oldd mr-20 '>
 						   <Carousel cards={cards} height="500px" width="100%"/>
 	                   </div> */}
 						</div>
-
 					</ParallaxLayer>
 					{/* <ParallaxLayer offset={2} style={{ marginTop: 200, }} speed={1}>
  
       </ParallaxLayer> */}
 				</Parallax>
 			</div>
-			<Footer/>
+			<Footer />
 		</div>
 	);
 };

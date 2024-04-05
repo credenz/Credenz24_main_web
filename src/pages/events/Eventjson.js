@@ -180,17 +180,18 @@ const EventJson = [
 		body: 'Put your logical, aptitude and business knowledge and analyzing expertise to crack some time-bound challenges. Showcase your communication skills through presentations and ideation. Showcase strong decision-making skills at crucial timings.',
 		id: 0,
 		structure: {
-			1: 'Aptitude testing: Round-1 is aptitude round will contain questions based on data interpretation and basic aptitude with a business flavor in it followed by stock and share market.',
+			1: 'Aptitude Round: Round-1 is aptitude round will contain questions based on data interpretation and basic aptitude with a business flavor in it followed by stock and share market.',
 			2: 'Auction Round: Qualified participants will be asked to bring three more members to form a team of 4. Every team will be given an equal budget and with excellent decision-making and analysis, you have to buy Companies. Teams will be shortlisted according to the addition of Company ratings for the next round.',
-			3: 'Shark Tank Round:Qualified teams will be given random pitches and they have to pitch in front of real sharks who will judge your pitching skills to decide the winner team.',
+			3: 'Shark Tank Round: Qualified teams will be given random pitches and they have to pitch in front of real sharks who will judge your pitching skills to decide the winner.',
 		},
 		rules: {
 			1: 'Participants are not allowed to use Smart Gadgets and Mobile Phones during the event.',
 			2: 'Participants should report 20 minutes earlier than the given time.',
+			3: 'Any Malpractices can direct lead to disqualification.',
 		},
 		amount: 70,
 		count: 1,
-		team: 'Team strength different for different rounds',
+		team: 'round 1 : Individual',
 		contact: [
 			{
 				name: 'Pranav Bhiungade',
@@ -202,7 +203,7 @@ const EventJson = [
 			},
 			{
 				name: 'Vishal Bhokre',
-				phone: '+91 70204 04591',
+				phone: '+91 99220 45868',
 			},
 		],
 		prizes: [
@@ -258,7 +259,8 @@ const EventJson = [
 	{
 		heading: 'DataWiz',
 		body: "DataWiz is an exhilarating event designed to test participants' proficiency in data analysis, machine learning, and artificial intelligence. It serves as a platform where participants are challenged to showcase their skills in handling real-world datasets and developing robust AI/ML models to derive meaningful insights.",
-		structure: 'Individual event',
+		structure:
+			'Use your AIML skills to train the best model possible and keep playing to clear two rounds.',
 		rules: {
 			1: 'Fair Play: Uphold integrity by adhering to the rules and refrain from engaging in cheating or unethical behaviour.',
 			2: 'Give Your Best: Demonstrate your skills and expertise by putting forth your utmost effort.',

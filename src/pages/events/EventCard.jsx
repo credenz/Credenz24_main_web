@@ -110,7 +110,7 @@ const EventCard = ({ img, item }) => {
 					</Transition.Child>
 
 					<div className="fixed inset-0 overflow-y-aut">
-						<div className="flex items-center justify-center min-h-full p-4 text-center md:bg-inherit bg-slate-800">
+						<div className="flex items-center justify-center min-h-full md:p-4 py-2 px-0 text-center md:bg-inherit bg-slate-800">
 							<Transition.Child
 								as={Fragment}
 								enter="ease-out duration-300"
@@ -119,7 +119,7 @@ const EventCard = ({ img, item }) => {
 								leave="ease-in duration-200"
 								leaveFrom="opacity-100 scale-100"
 								leaveTo="opacity-0 scale-95">
-								<Dialog.Panel className="bg-[#04121c] shadow-lg w-full max-w-4xl md:max-h-[550px] sm:h-[580px] p-2 md:p-6 overflow-hidden text-left align-middle transition-all transform border-t-2 border-b-2 border-teal-600 ">
+								<Dialog.Panel className="bg-[#04121c] [&::-webkit-scrollbar]:[width:2px]  shadow-lg w-full max-w-4xl md:max-h-[550px] sm:h-[560px] overflow-y-scroll p-2 md:p-6 md:overflow-hidden text-left align-middle transition-all transform border-t-2 border-b-2 border-teal-600 ">
 									<Dialog.Title
 										as="h3"
 										className="text-lg font-medium leading-6 text-gray-900">

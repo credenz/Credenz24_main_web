@@ -41,7 +41,7 @@ const PassPayment = () => {
 							/>
 						)}
 					</div>
-					<div className="sm:flex-[0.5] my-1 flex flex-row md:items-center w-[50%] justify-evenly  md:flex-col">
+					<div className="sm:flex-[0.5] my-1 flex flex-row md:items-center w-[50%] justify-evenly  md:flex-col items-center">
 						<p className="px-1 text-xl text-center text-slate-400">
 							Total Price
 						</p>

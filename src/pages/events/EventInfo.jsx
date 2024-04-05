@@ -24,8 +24,8 @@ const EventInfo = ({ data }) => {
 	// Info
 	const DataInfo = () => {
 		return (
-			<div className="px-2 py-1 m-1 text-center">
-				<p className="my-3 text-center font-[Poppins]">{body}</p>
+			<div className="px-2 py-1 m-1 text-center text-md md:text-lg ">
+				<p className="my-3 text-center font-[Poppins] !text-md">{body}</p>
 				<div>
 					<h2 className="text-lg font-semibold tracking-wider text-teal-200 py-1 w-[fit-content] border-b-2">
 						Timings :
@@ -113,7 +113,7 @@ const EventInfo = ({ data }) => {
 	});
 
 	return (
-		<div className="w-full px-2 mb-2 font-[K2D]">
+		<div className="w-full px-0 md:px-2 mb-2 font-[K2D] !text-md">
 			{data ? (
 				<Tab.Group>
 					<Tab.List className="flex p-1 space-x-1 *:rounded-lg bg-blue-900/20 ">
@@ -123,7 +123,7 @@ const EventInfo = ({ data }) => {
 									key={category}
 									className={({ selected }) =>
 										classNames(
-											'w-[80%] rounded-lg py-2 text-lg font-[K2D] leading-5',
+											'w-[80%] rounded-lg py-2 md:text-lg text-md font-[K2D] leading-5',
 											'ring-white/60 select-none focus:outline-none ',
 											selected
 												? 'bg-sky-950 text-white border-2 border-teal-700 shadow'
@@ -153,7 +153,7 @@ const EventInfo = ({ data }) => {
 								<div
 									key={Math.random() * 1.5}
 									className="flow m-auto overflow-y-scroll h-[300px] [&::-webkit-scrollbar]:[width:2px]
-									[&::-webkit-scrollbar-thumb]:bg-blue-300 text-lg text-blue-100 mb-2 md:px-4 sm:px-1
+									[&::-webkit-scrollbar-thumb]:bg-blue-300 md:text-lg text-sm text-blue-100 mb-2 md:px-4 sm:px-1
 									 post rounded-none">
 									{posts}
 								</div>
