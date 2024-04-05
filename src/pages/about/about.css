@@ -1,0 +1,214 @@
+.animation, .animation_layer {
+	height: 900px;
+}
+
+.animation {
+  display: block;
+	position: relative;
+	z-index: 10;
+}
+
+.animation_layer {
+	background-position: bottom center;
+	/* width: 100%; */
+  /* background-size: auto 1038px; */
+	/* position: absolute; */
+	background-size: cover;
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+.animation_layer.parallax {
+	position: fixed;
+}
+
+#bgblue {
+  background-image: url(../../assets/aboutus/Aboutbg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#bubbles {
+  background-image: url(../../assets/Contactus/bubbles.png);
+  width:100%;
+  
+}
+#flora4 {
+  background-image: url(../../assets/aboutus/flora4.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#flora3 {
+  background-image: url(../../assets/aboutus/flora3.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 850px;
+}
+
+#flora2 {
+  background-image: url(../../assets/aboutus/flora2.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#flora1 {
+  background-image: url(../../assets/aboutus/flora1.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  
+}
+
+#flora {
+  background-image: url(../../assets/aboutus/flora.png);
+  
+	background-size: cover;
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+ #shark {
+  background-image: url(../../assets/aboutus/shark.png);
+  background-size: 60% 35%;
+  top:-20%;
+  right:40%;
+  height:80%;
+  width:60%;
+} 
+
+#aquaman {
+  background-image: url(../../assets/aboutus/AquaMan.png);
+  background-size: 25% 15%;
+  top: -20%;
+  right: -20%;
+  height:100%;
+  width:80%;
+  animation: animate2 5s linear infinite
+}
+@keyframes animate2 
+    {
+      0%
+      {
+        transform: translateY(-50px);
+        right: -25%;
+      }
+      25%
+      {
+        transform: translateY(0px);
+      }50%
+      {
+        transform: translateY(50px);
+      }75%
+      {
+        transform: translateY(0px);
+      }100%
+      {
+        transform: translateY(-50px);
+        right: 150%;
+      }
+    }
+
+/* #bigfish {
+  background-image: url(../../assets/aboutus/Big_Fish.png);
+  background-size: 50% 30%;
+  top: -20%;
+  right: -20%;
+  height:100%;
+  width:80%;
+}  */
+
+/* #smallfish {
+    background-image: url(../../assets/aboutus/smallfish.png);
+    background-size: 50% 30%;
+    top: -20%;
+    right: -20%;
+    height:100%;
+    width:80%;
+     background-repeat: no-repeat;
+  }  */
+
+  ::-webkit-scrollbar {
+    width: 10px;          
+ }
+ 
+ ::-webkit-scrollbar-thumb {   
+   border-radius: 30px;
+   background: linear-gradient(#6598cb, #6598cb);
+   box-shadow: inset 2px 2px 2px rgba(255,255,255,.25), inset -2px -2px 2px rgba(0,0,0,.25);}
+ 
+ ::-webkit-scrollbar-track {     
+   background-color: #fff;
+   border-radius:10px;
+   background: linear-gradient(to right,#201c29,#201c29 1px,#100e17 1px,#100e17);
+ }
+
+
+.map{
+  width: '50%';
+}
+
+
+@media (max-width: 768px) {
+  .Aboutus .animation .animation_layer.parallax .logo-image {
+    width: 80px;
+  }
+  .head{
+    font-size: 8rem;
+  }
+  #AnimationTooltip{
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .Aboutus .animation .animation_layer.parallax .logo-image {
+      width: 80px;
+      height: 80px;
+      background: none;
+  }
+  .map{
+    width: '100%';
+  }
+  .head{
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .Aboutus .animation .animation_layer.parallax .logo-image {
+      width: 80px;
+      height: 80px;
+  }
+  .map{
+    width: '100%';
+  }
+  .head{
+    font-size: 5rem;
+  }
+  #aquaman {
+    background-size: 45% 15%;
+    top: 10%;
+    right: -20%;
+    height:100%;
+    width:80%;
+  
+  }
+  #shark {
+    background-size: 50% 25%;
+    top:19%;
+    right:40%;
+    height:80%;
+    width:60%;
+  } 
+}

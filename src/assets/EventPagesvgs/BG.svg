@@ -1,0 +1,14 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 741 518" width="1920" height="1342">
+	<title>NewPage</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m0 0h741v518h-741z"/>
+		</clipPath>
+	</defs>
+	<style>
+		.s0 { fill: #9edbff } 
+	</style>
+	<g id="Page 1" clip-path="url(#cp1)">
+		<path id="BG" class="s0" d="m0 0h741v518h-741z"/>
+	</g>
+</svg>

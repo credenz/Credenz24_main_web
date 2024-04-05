@@ -1,0 +1,225 @@
+.event{
+    /* background-image: url('../../images/panel-transformed.png'); */
+    background-repeat: none;
+    background-size: cover;
+    background-image: url('../../images/37130.jpg');
+}
+
+.eventCard{
+    background-image: url('../../images/window.png');
+    background-size: contain;
+    /* border: 14px solid red; */
+}
+
+.hovcard{
+  perspective: 70px!important;
+  padding: 0px!important;
+}
+
+.post{
+    font-family: "K2D";
+    font-family: 'Poppins'!important;
+    font-size: clamp(1rem, -1.5rem + 8vw, 3rem);
+}
+
+.animation, .animation_layer {
+    height:1000px;
+    }
+    
+    .animation {
+      display: block;
+      height:auto;
+      position: relative;
+      z-index: 10;
+    }
+    
+    .animation_layer {
+      background-position: bottom center;
+      background-size: auto 1000px;
+      background-repeat: no-repeat;
+      width: 100%;
+      position: absolute;
+    }
+    .animation_layer.parallax {
+      position: fixed;
+    }
+
+
+    #eventbg {
+      background-image: url(../../assets/EventPagesvgs/BG.svg);
+      height:800px;
+    }
+  
+    
+    #Elayer1 {
+      background-image: url(../../assets/EventPagesvgs);
+    }
+    
+    .c
+    {
+      width: 100%;
+      height: 100vh;
+      /* background-color: rgb(8, 8, 32); */
+      position: absolute;
+      overflow: hidden;
+    }
+    .eventCard{
+        background-image: url('../../images/window.png');
+        background-size: contain;
+        /* border: 14px solid red; */
+    }
+    
+    .hovcard{
+      perspective: 70px!important;
+      padding: 0px!important;
+    }
+    
+    .post{
+        font-family: "K2D";
+        font-family: 'Poppins'!important;
+        font-size: clamp(1rem, -1.5rem + 8vw, 3rem);
+    }
+    
+    .animation, .animation_layer {
+        height:1000px;
+        }
+        
+        /* #eturtle {
+          background-image: url(../../assets/sponsor22/turtle.svg);
+          height: 20%;
+        } */
+        
+        .bub {
+          width: 130px;
+          height: 130px;
+          border: 1px solid skyblue;
+          box-shadow: inset 5px -5px 10px skyblue;
+          border-radius: 50%;
+          background-color: rgba(255, 255, 255, .01);
+          backdrop-filter: blur(2px);
+          -webkit-backdrop-filter: blur(2px);
+          position: absolute;
+          bottom: -100px;
+          /* animation: bubble 3s ease-in infinite; */
+      }
+      
+      .bub::before {
+        position: absolute;
+        content: "";
+        background-color: skyblue;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        top: 25px;
+        right: 23px;
+        box-shadow: 0px 0px 20px skyblue;
+      }
+      
+      .bub.a {
+        width: 100px;
+        height: 100px;
+          left: 10%;
+          animation: bubble2 10s ease-in 1s infinite;
+      }
+      
+      .bub.b {
+        width: 90px;
+        height: 90px;
+          left: 20%;
+          animation: bubble 15s ease-in 1.4s infinite;
+      }
+      
+      .bub.c {
+        width: 100px;
+        height: 100px;
+          left: 28%;
+          animation: bubble 8s ease-in 3.8s infinite;
+      }
+      
+      .bub.d {
+            width: 100px;
+        height: 100px;
+          left: 40%;
+          animation: bubble 7s ease-in .5s infinite;
+      }
+      
+      .bub.e {
+        width: 100px;
+        height: 100px;
+          left: 75%;
+          animation: bubble2 4s ease-in 2.5s infinite;
+      }
+      
+      .bub.f {
+        width: 110px;
+        height: 110px;
+          left: 90%;
+          animation: bubble 6.5s ease-in 3s infinite;
+      }
+      
+      .bub.g {
+        width: 100px;
+        height: 100px;
+          left: 60%;
+          animation: bubble 2s ease-in 2s infinite;
+      }
+      
+      .bub.k {
+        width: 90px;
+        height: 90px;
+          left: 50%;
+          animation: bubble 8.5s ease-in 2s infinite;
+      }
+      
+      .bub.i {
+        width: 90px;
+        height: 90px;
+          left: 65%;
+          animation: bubble2 9s ease-in 2.1s infinite;
+      }
+      
+      .bub.j {
+        width: 100px;
+        height: 100px;
+          left: 3%;
+          animation: bubble 11s ease-in 1.5s infinite;
+      }
+      
+      .bub.h {
+        width: 120px;
+        height: 120px;
+          left: 35%;
+          animation: bubble2 3s ease-in infinite;
+      }
+      
+      @keyframes bubble {
+          0% {
+              opacity: 0;
+          }
+          10%,
+          93% {
+              opacity: 1;
+          }
+          100% {
+              transform: translate(90px, -700px);
+              display: none;
+              overflow: hidden;
+    
+          }
+      }
+      
+      @keyframes bubble2 {
+          0% {
+              opacity: 0;
+          }
+          10%,
+          93% {
+              opacity: 1;
+          }
+          100% {
+              transform: translate(-90px, -700px);
+              display: none;
+              overflow: hidden;
+          }
+      }
+
